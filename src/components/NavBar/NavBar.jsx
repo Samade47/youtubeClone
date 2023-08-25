@@ -4,10 +4,8 @@ import { Humberger, Youtube, SearchIcon, Dots, User } from "./index";
 const NavBar = () => {
   return (
     <NavStyle>
-      <div className="humberger">
+      <div className="menu">
         <Humberger />
-      </div>
-      <div className="logo">
         <Youtube />
       </div>
       <div className="search">
@@ -16,7 +14,7 @@ const NavBar = () => {
             <SearchIcon />
           </label>
           <input type="text" name="search" id="search" />
-          <button>
+          <button className="searchBtn" >
             <SearchIcon />
           </button>
         </div>

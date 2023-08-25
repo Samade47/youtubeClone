@@ -1,11 +1,12 @@
 import { ThemeProvider } from "styled-components";
 import NavBar from "../components/NavBar/NavBar";
-import { theme } from "../GlobalStyle";
+import { GlobalStyle, theme } from "../GlobalStyle";
 
 const Root = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <GlobalStyle/>
       <NavBar/>
       </ThemeProvider>
     </>
