@@ -1,5 +1,5 @@
 import NavStyle from "./Style";
-import { Humberger, Youtube, SearchIcon, Dots, User } from "./index";
+import { Humberger, Youtube, SearchIcon, Dots, User, Michrophone } from "./index";
 
 const NavBar = () => {
   return (
@@ -10,13 +10,18 @@ const NavBar = () => {
       </div>
       <div className="search">
         <div className="searchBar">
-          <label htmlFor="search">
-            <SearchIcon />
-          </label>
-          <input type="text" name="search" id="search" />
+          <div className="searchInput">
+            <label htmlFor="search" className="searchBlock">
+              <SearchIcon />
+            </label>
+            <input type="text" name="search" id="search" placeholder="Rechercher" />
+          </div>
           <button className="searchBtn" >
             <SearchIcon />
           </button>
+        </div>
+        <div className="microBtn">
+          <Michrophone />
         </div>
       </div>
       <div className="other">

@@ -18,9 +18,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
-    bgColor:"#0F0F0F",
-    textColor:"#ffffff",
-    textColorShade:"#FEFEFE"
+    bgColor: "#0F0F0F",
+    bgColorShade: "##222222",
+    textColor: "#ffffff",
+    textColorShade: "#FEFEFE",
+
+    borderColor: "#ffffff31",
 }
 
-export {GlobalStyle,theme}
+export { GlobalStyle, theme }
