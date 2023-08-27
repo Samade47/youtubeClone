@@ -1,6 +1,13 @@
 import { styled } from "styled-components";
 
 const NavStyle = styled.nav`
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    min-width: min-content;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +38,7 @@ const NavStyle = styled.nav`
 
     & .searchBar{
         min-width: 32rem;
-        max-width: 60%;
+        /* max-width: 60%; */
         width: max-content;
         display: flex;
         flex-wrap: nowrap;
@@ -61,10 +68,14 @@ const NavStyle = styled.nav`
         font-size: .9rem;
         
     }
-    & input:has(:focus) .searchInput{
-        border: 1px solid blue;
+    & .searchInput:has(input:focus) {
+        outline: 2px solid #0015ff41;
+    }
+    & .serchInput:has(:focus) .searchBlock{
+        flex: auto;
     }
     & .searchBlock{
+        flex: 0;
         display: flex;
         align-content: center;
         justify-content: center;
@@ -94,6 +105,9 @@ const NavStyle = styled.nav`
         gap: 2rem;
         font-size: 1.3rem;
     }
+    & .menu>*:last-child{
+        margin-top: .3rem;
+    }
     & .menu > *{
         cursor: pointer;
     }
@@ -102,27 +116,6 @@ const NavStyle = styled.nav`
         flex-wrap: nowrap;
         gap: 1rem;
     }
-    & .other > *{
-        background-color: ${props => props.theme.borderColor};
-        color: ${props => props.theme.textColor};
-        border: none;
-        padding: 0.4rem 0.5rem;
-        border-radius: 100px;
-        display: flex;
-        align-items:center;
-        justify-content: center;
-        flex-wrap: nowrap;
-        gap: 6px;
-        font-size: .9rem;
-        cursor: pointer;
-    }
-    & .other>*:last-child{
-        background-color: #2e69ff21;
-        color: #7ba1ffe6;
-        padding-inline:.8rem ;
-    }
-        
-
 `;
 
 export default NavStyle

@@ -1,3 +1,4 @@
+import { BasicBtn, BasicBtnAccent } from "../Styles/BasicBtn";
 import NavStyle from "./Style";
 import { Humberger, Youtube, SearchIcon, Dots, User, Michrophone } from "./index";
 
@@ -5,7 +6,9 @@ const NavBar = () => {
   return (
     <NavStyle>
       <div className="menu">
-        <Humberger />
+        <BasicBtn border="true">
+          <Humberger />
+        </BasicBtn>
         <Youtube />
       </div>
       <div className="search">
@@ -25,12 +28,12 @@ const NavBar = () => {
         </div>
       </div>
       <div className="other">
-        <button className="threeDots">
+        <BasicBtn border="true">
           <Dots />
-        </button>
-        <button className="LoginBtn" >
+        </BasicBtn>
+        <BasicBtnAccent>
           <User /> Login
-        </button>
+        </BasicBtnAccent>
       </div>
     </NavStyle>
   );
