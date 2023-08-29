@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 const NavStyle = styled.nav`
     position: fixed;
+    background-color: ${props => props.theme.bgColor};
     z-index: 999;
     left: 0;
     right: 0;
