@@ -1,12 +1,16 @@
+import { useContext } from "react";
 import { BasicBtn, BasicBtnAccent } from "../Styles/BasicBtn";
 import NavStyle from "./Style";
 import { Humberger, Youtube, SearchIcon, Dots, User, Michrophone } from "./index";
 
-const NavBar = () => {
+const NavBar = ({ setExpanded }) => {
+  const toggleBtn = () => {
+    setExpanded(prev => !prev)
+  }
   return (
     <NavStyle>
       <div className="menu">
-        <BasicBtn border="true">
+        <BasicBtn border="true" onClick={toggleBtn} >
           <Humberger />
         </BasicBtn>
         <Youtube />

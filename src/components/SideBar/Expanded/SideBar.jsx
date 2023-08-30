@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MenuDevider, MenuItem, MenuSection } from "../../Styles/MenuItems";
 import { SideBarStyle } from "./SideBarStyle";
 import { Gaming, Home, Shorts, Videos, Star, Library, History, Fire, MusicNote, Add, YoutubeIcon, Settings, FeedBack, Help, Flag } from "..";
+import ToggleState from "../../../App/context";
 
 const SideBar = () => {
+  const expanded = useContext(ToggleState)
   return (
-    <SideBarStyle>
+    <SideBarStyle expanded={expanded} >
       <MenuSection>
         <MenuItem>
           <Home />

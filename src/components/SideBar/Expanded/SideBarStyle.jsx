@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 
 const SideBarStyle = styled.div`
     position: fixed;
+    left:${props => props.expanded ? 0 : -250}px;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@ const SideBarStyle = styled.div`
     gap:${props => props.theme.spacerSm}px;
     overflow-y: auto;
     padding: ${props => props.theme.spacerSm}px;
+    transition: left 0.3s ease-out;
 
     /* ===== Scrollbar CSS ===== */
   /* Firefox */
