@@ -8,7 +8,7 @@ const SideBarStyle = styled.div`
     height: 90%;
     display: flex;
     flex-direction: column;
-    /* background-color: #ebff1513; */
+    background-color: ${props => props.theme.bgColor};
     gap:${props => props.theme.spacerSm}px;
     overflow-y: auto;
     padding: ${props => props.theme.spacerSm}px;

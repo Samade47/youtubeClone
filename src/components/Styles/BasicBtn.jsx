@@ -13,6 +13,7 @@ const BasicBtn = styled.button`
   cursor: pointer;
   border: 1px solid ${(props) => props.border ? props.theme.borderColor : "transparent"};
   transition: 0.3s ease-out;
+
   &:hover {
     background-color: ${(props) =>
     props.btnColor ? props.btnColor : props.theme.borderColor};
@@ -38,5 +39,6 @@ const BasicBtnAccent = styled.button`
     background-color: ${(props) => (props.bg ? props.bg : "#0536b24a")};
   }
 `;
+
 
 export { BasicBtn, BasicBtnAccent };

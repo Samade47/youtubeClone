@@ -40,6 +40,7 @@ const theme = {
     textColor: darkTheme ? "#ffffff" : "#0F0F0F",
     textColorShade: darkTheme ? "#FEFEFE" : "##222222",
     borderColor: darkTheme ? "#ffffff31" : "#b8b8b859",
+    tagBackground: "#3D3D3D",
     primaryColor: "#df0e0e",
 
     // Space System
